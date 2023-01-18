@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-import 'react-animation/dist/keyframes.css'
-import 'swiper/swiper.min.css';
+import {Animated} from "react-animated-css";
 export default function SliderSection() {
   const slider = [
     {
@@ -36,9 +35,9 @@ export default function SliderSection() {
                                 <div className="swipeinner container">
                                     <div className="row justify-content-center">
                                         <div className="col-lg-9 col-md-10 text-center position-relative">
-                                        <h1 style={{animation: "fade-in-up 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards"}}>{item.title}</h1>
-                                        <h6 style={{animation: "fade-in-up 2s cubic-bezier(0.19, 1, 0.22, 1) forwards"}}>{item.subtitle}</h6>
-                                        <Link className="btn btn-dark btn-round text-white" style={{animation: "fade-in-up 2s cubic-bezier(0.19, 1, 0.22, 1) forwards"}} to={item.btnUrl}>{item.btnName}<i className="fas fa-arrow-right ps-3"></i></Link>
+                                        <Animated animationIn="fadeInUp" animationInDelay ={1000} isVisible={true} ><h1>{item.title}</h1></Animated>
+                                        <Animated animationIn="fadeInUp" animationInDelay ={1200} isVisible={true} ><h6>{item.subtitle}</h6></Animated>
+                                        <Link className="btn btn-dark btn-round text-white" to={item.btnUrl}>{item.btnName}<i className="fas fa-arrow-right ps-3"></i></Link>
                                         </div>
                                     </div>
                                 </div>
