@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import FaqSection from '../components/FaqSection';
 import PageHeader from '../containers/PageHeader'
 import Layout from '../layout/Layout'
@@ -32,11 +32,11 @@ export default function FaqPage() {
   ]
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Faq | SoftTech</title>
         <meta name="description" content="Faq Page description"/>
         <meta name="title" content= "Faq | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeader data={data} />
       <FaqSection faqList={faqList}/>
     </Layout>

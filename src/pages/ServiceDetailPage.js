@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import { useParams  } from 'react-router-dom'
 import ServiceContent from '../components/ServiceDetails/ServiceContent';
 import PageHeader from '../containers/PageHeader';
@@ -82,11 +82,11 @@ export default function ServiceDetailPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>{title} | SoftTech</title>
         <meta name="description" content="Service Page description"/>
         <meta name="title" content= {`${title} | SoftTech`}/>
-      </MetaTags>
+      </Helmet>
       <PageHeader data={data}/>    
       <ServiceContent data={data}/>    
     </Layout>

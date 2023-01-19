@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import Layout from '../layout/Layout';
 import PageHeaderSection from '../components/PageHeaderSection'
 import ClientSectionTwo from '../components/ClientSectionTwo';
@@ -20,11 +20,11 @@ export default function OurValuesPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Our Values | SoftTech</title>
         <meta name="description" content="Our Values Page description"/>
         <meta name="title" content= "Our Values | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeaderSection data={data}/>
       <About />
       <Process />

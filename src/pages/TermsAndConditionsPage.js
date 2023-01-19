@@ -1,17 +1,17 @@
-import React from 'react'
-import Layout from '../layout/Layout'
-import MetaTags from "react-meta-tags";
+import React from 'react';
+import Layout from '../layout/Layout';
+import {Helmet} from "react-helmet";
 
 export default function TermsAndConditionsPage() {
   const title = "Terms and Conditions";
   const description = "Let success motivate you. Find a picture of what epitomizes success to you and then pull it out when you are in need of motivation.";
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Terms and Conditions | SoftTech</title>
         <meta name="description" content="Terms and Conditions Page description"/>
         <meta name="title" content= "Terms and Conditions | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <section className="space-ptb">
         <div className="container">
           <div className="row justify-content-center">

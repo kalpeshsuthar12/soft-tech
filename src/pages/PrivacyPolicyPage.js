@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import Layout from '../layout/Layout'
 
 export default function PrivacyPolicyPage() {
@@ -8,11 +8,11 @@ export default function PrivacyPolicyPage() {
   const description = "Use a past defeat as a motivator. Remind yourself you have nowhere to go except up as you have already been at the bottom.";
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Privacy Policy | SoftTech</title>
         <meta name="description" content="Privacy Policy Page description"/>
         <meta name="title" content= "Privacy Policy | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <section className="space-ptb">
         <div className="container">
           <div className="row justify-content-center">

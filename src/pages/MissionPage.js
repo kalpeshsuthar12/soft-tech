@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import Layout from '../layout/Layout'
 import PageHeaderSection from '../components/PageHeaderSection'
 import CounterSectionTwo from '../components/CounterSectionTwo';
@@ -21,11 +21,11 @@ export default function MissionPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Mission & Vission | SoftTech</title>
         <meta name="description" content="Mission & Vission Page description"/>
         <meta name="title" content= "Mission & Vission | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeaderSection data={data}/>
       <About />
       <Image />

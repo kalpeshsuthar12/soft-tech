@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import { useParams } from 'react-router-dom'
 import ActionSection from '../components/ActionSection';
 import CaseStudyDetail from '../components/CaseStudy/CaseStudyDetail';
@@ -173,11 +173,11 @@ export default function ProjectDetailPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>{title} | SoftTech</title>
         <meta name="description" content="Project Detail Page description"/>
         <meta name="title" content= {`${title} | SoftTech`}/>
-      </MetaTags>
+      </Helmet>
       <PageHeader data={data}/>
       <CaseStudyDetail data={data}/>
       <ActionSection />

@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import { useParams } from 'react-router-dom';
 import BlogDetails from '../components/BlogDetails/BlogDetails';
 import BlogPageHeader from '../containers/BlogPageHeader';
@@ -65,11 +65,11 @@ export default function Blog() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>{title} | Blog | SoftTech</title>
         <meta name="description" content="About Page description"/>
         <meta name="title" content={`${title} | Blog | SoftTech`}/>
-      </MetaTags>
+      </Helmet>
       <BlogPageHeader data={data}/>
       <BlogDetails blogSelected={blogSelected}/>
     </Layout>

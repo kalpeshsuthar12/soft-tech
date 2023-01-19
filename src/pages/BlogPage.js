@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import PageHeader from '../containers/PageHeader'
 import Layout from '../layout/Layout'
 import Blogs from '../components/Blogs/Blogs';
@@ -15,11 +15,11 @@ export default function BlogPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Blogs | SoftTech</title>
         <meta name="description" content="Blogs Page description"/>
         <meta name="title" content= "Blogs | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeader data={data}/>
       <Blogs />
     </Layout>

@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import History from '../components/About/History';
 import ActionSection from '../components/ActionSection';
 import ProjectsSection from '../components/ProjectsSection';
@@ -23,11 +23,11 @@ export default function AboutPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>About us | SoftTech</title>
         <meta name="description" content="About Page description"/>
         <meta name="title" content="About us | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeaderSection data={data}/>
       <History />
       <Service />

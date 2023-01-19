@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import ActionSection from '../components/ActionSection';
 import ProjectsSection from '../components/ProjectsSection';
 import PageHeader from '../containers/PageHeader'
@@ -17,11 +17,11 @@ export default function ProjectsPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Case Studies | SoftTech</title>
         <meta name="description" content="Case Studies Page description"/>
         <meta name="title" content= "Case Studies | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeader data={data}/>
       <AboutSection />
       <ProjectsSection />

@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import Layout from '../layout/Layout'
 import PageHeaderSection from '../components/PageHeaderSection'
 import PricingSection from '../components/PricingSection';
@@ -21,11 +21,11 @@ export default function HowWeWorkPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>How We Work | SoftTech</title>
         <meta name="description" content="How We Work Page description"/>
         <meta name="title" content= "How We Work | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeaderSection data={data}/>
       <About />
       <Performance />

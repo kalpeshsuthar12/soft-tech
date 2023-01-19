@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import About from '../components/Career/About';
 import ChooseUs from '../components/Career/ChooseUs';
 import Faq from '../components/Career/Faq';
@@ -20,11 +20,11 @@ export default function CareersPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Career | SoftTech</title>
         <meta name="description" content="Career Page description"/>
         <meta name="title" content= "Career | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeaderSection data={data}/>
       <About />
       <ProjectsSection />      

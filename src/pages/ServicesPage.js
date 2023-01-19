@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import Layout from '../layout/Layout'
 import ActionSection from '../components/ActionSection'
 import ServicesSection from '../components/Services/ServicesSection'
@@ -61,11 +61,11 @@ export default function ServicesPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Services | SoftTech</title>
         <meta name="description" content="Services Page description"/>
         <meta name="title" content= "Services | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeader data={data}/>
       <ServicesSection service={service} />      
       <ActionSection />

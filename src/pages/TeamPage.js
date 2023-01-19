@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import Layout from '../layout/Layout'
 import PageHeaderSection from '../components/PageHeaderSection'
 import TestimonialSection from '../components/TestimonialSection';
@@ -21,11 +21,11 @@ export default function TeamPage() {
   }
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Our Team | SoftTech</title>
         <meta name="description" content="Our Team Page description"/>
         <meta name="title" content= "Our Team | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <PageHeaderSection data={data}/>
       <About />      
       <Members />      

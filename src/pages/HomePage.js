@@ -1,5 +1,5 @@
 import React from 'react'
-import MetaTags from "react-meta-tags";
+import {Helmet} from "react-helmet";
 import ActionSection from '../components/ActionSection'
 import BlogSection from '../components/BlogSection'
 import ProjectsSection from '../components/ProjectsSection'
@@ -15,11 +15,11 @@ import Layout from '../layout/Layout'
 export default function HomePage() {
   return (
     <Layout>
-      <MetaTags>
+      <Helmet>
         <title>Home | SoftTech</title>
         <meta name="description" content="Home Page description"/>
         <meta name="title" content= "Home | SoftTech"/>
-      </MetaTags>
+      </Helmet>
       <SliderSection />
       <ClientSection />
       <ServiceSection />      
