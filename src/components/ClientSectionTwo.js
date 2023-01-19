@@ -40,7 +40,7 @@ export default function ClientSection() {
         "/assets/images/award-logo/06.svg"
     ]
   return (
-    <section className="space-ptb our-clients">
+    <section className="space-pt our-clients">
       <div className="container">
         <div className="row align-items-center justify-content-center">
           <div className="col-md-12">

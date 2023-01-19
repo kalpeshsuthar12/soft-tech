@@ -8,6 +8,7 @@ import CounterSectionTwo from '../components/CounterSectionTwo';
 import PageHeaderSection from '../components/PageHeaderSection'
 import TestimonialSection from '../components/TestimonialSection';
 import Layout from '../layout/Layout'
+import Service from '../components/About/Service';
 
 export default function AboutPage() {
   const pageTitle = "About";
@@ -29,6 +30,7 @@ export default function AboutPage() {
       </MetaTags>
       <PageHeaderSection data={data}/>
       <History />
+      <Service />
       <ProjectsSection />
       <CounterSectionTwo />
       <TestimonialSection />

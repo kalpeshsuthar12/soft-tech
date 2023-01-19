@@ -43,7 +43,7 @@ export default function ServiceSection() {
         }
     ]
   return (
-    <section className="space-ptb position-relative">
+    <section className="space-pt position-relative">
       <div className="container">
         <div className="row">
           <div className="col-lg-4">

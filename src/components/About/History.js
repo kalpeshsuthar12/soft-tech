@@ -1,86 +1,131 @@
-import React,{useState} from 'react'
-import HorizontalTimeline from "react-horizontal-timeline";
+import React, { useEffect } from 'react'
+import CountUp from 'react-countup';
+import { jarallax, jarallaxVideo } from 'jarallax';
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 export default function History() {
-    const [value, setValue] = useState(0);// eslint-disable-next-line
-    const [previous, setPrevious] = useState(0); 
-    const VALUES = ["2010-01-01", "2012-01-01", "2014-01-01", "2016-01-01", "2018-01-01", "2020-01-01"];
-    const timelineDescription = [
-        {
-            year : "2010",
-            title : "They often mean leaving the perception of security in order to discover your personal freedom. These are the changes that will bring happiness and satisfaction into your life. Just go there now.",
-            subtitle : "10 years out… having made a decade of changes. Imagine living the life you want to live.",
-            description : "The best way is to develop and follow a plan. Start with your goals in mind and then work backwards to develop the plan. What steps are required to get you to the goals? Make the plan as detailed as possible. Try to visualize and then plan for, every possible setback. Commit the plan to paper and then keep it with you at all times. Review it regularly and ensure that every step takes you closer to your Vision and Goals."
+    
+    useEffect(()=>{
+        jarallaxVideo();
+        jarallax(document.querySelectorAll('.jarallax'), {
+        speed: 0.2,
+        type : "scale",
+        videoSrc: 'https://www.youtube.com/embed/9No-FiEInLA'
+        });
+    })
+    const options = {
+        margin: 40,
+        loop: true,
+        responsiveClass: true,
+        nav: false,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            400: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            700: {
+                items: 1,
+            },
+            1000: {
+                items: 1,
+    
+            }
         },
-        {
-            year : "2012",
-            title : "What is the exact sequence of events that will take you to where you want to be? Have a think consciously of what you need to do. Every outcome begins with the first step.",
-            subtitle : "What is the exact sequence of events that will take you to where you want to be? Have a think consciously of what you need to do. Every outcome begins with the first step.",
-            description : "This is the beginning of creating the life that you want to live. Know what the future holds for you as a result of the choice you can make today."
-        },
-        {
-            year : "2014",
-            title : "Have some fun and hypnotize yourself to be your very own “Ghost of Christmas future” and see what the future holds for you. Success is something of which we all want more. Most people believe that success is difficult.",
-            subtitle : "What is the exact sequence of events that will take you to where you want to be? Have a think consciously of what you need to do. Every outcome begins with the first step.",
-            description : "The price is something not necessarily defined as financial. It could be time, effort, sacrifice, money or perhaps, something else. The point is that we must be fully aware of the price and be willing to pay it"
-        },
-        {
-            year : "2016",
-            title : "He sells his farm and hikes off over the horizon, never to be heard from again. Rumors say that years later he died destitute, never having found the diamonds he spent his life seeking.",
-            subtitle : "I don’t think the deciding factor was the desire. Lots of people come here to Japan, but never quite find out how to stay.",
-            description : "This is the beginning of creating the life that you want to live. Know what the future holds for you as a result of the choice you can make today."
-        },
-        {
-            year : "2018",
-            title : "Introspection is the trick. Understand what you want, why you want it and what it will do for you. This is a critical factor, and as such, is probably the most difficult step. For this reason, most people never complete this aspect – then wonder why life is so difficult!",
-            subtitle : "“Nothing changes until something moves” – this is the battle cry of author and journalist Robert Ringer. And he is absolutely correct",
-            description : "Without clarity, you send a very garbled message out to the Universe. We know that the Law of Attraction says that we will attract what we focus on, so if we don’t have clarity, we will attract confusion."
-        },
-        {
-            year : "2020",
-            title : "Make no mistake, the new owner already had money, or he could not have bought the land. There’s nothing in this story to make us think he was dreaming about riches, vast or otherwise. No burning desire. But he got the goodies.",
-            subtitle : "Once you have a clear understanding of what you want, it is critical that you engage in goal setting – specifically setting SMART goals.",
-            description : "Focus is having the unwavering attention to complete what you set out to do. There are a million distractions in every facet of our lives."
-        }
-     ];
-    const title = "Established 2010 in Soft-Tech has been offering world-className information technology.";
-    const description = "Positive pleasure-oriented goals are much more powerful motivators than negative fear-based ones. Although each is successful separately, the right combination of both is the most powerful motivational force known to humankind.";
+    };
+    const clientsLogo = [
+        "/assets/images/client-logo/light/01.svg",
+        "/assets/images/client-logo/light/02.svg",
+        "/assets/images/client-logo/light/03.svg",
+        "/assets/images/client-logo/light/04.svg",
+        "/assets/images/client-logo/light/05.svg",
+        "/assets/images/client-logo/light/06.svg",
+        "/assets/images/client-logo/light/07.svg",
+    ]
+    const completedProject = 1500 ;
+    const TotalReviews = 1000 ;
+    const TotalRating = 4.8 ;
+    const TotalEmployees = 35 ;
+    const TotalClients = 250 ;
+    const establishYear = 2018 ;
+    const companyName = "Soft-Tech" ;
+    const qualifiedemployees = "Work with our leaders and the hard-working personalities who deliver innovative concepts to corporations like yours." ;
     return (
-    <section className="space-ptb">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-md-9">
-            <div className="section-title text-center">
-              <h2>{title}</h2>
-              <p className="px-xl-5">{description}</p>
+        <section className="space-ptb">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 mb-4">
+              <div className="border border-radius p-5 p-md-4 h-100">
+                <span className="display-4 text-primary mb-3 d-block"><CountUp start={0} end={completedProject} duration={3} />+</span>
+                <h4 className="">Successfully completed projects</h4>
+              </div>
+            </div>
+            <div className="col-lg-5 col-md-6 mb-4">
+            <div className="jarallax h-100 p-5 p-md-3 border-radius d-flex text-center align-items-end bg-overlay-black-10">
+                <span className="text-stroke-white fw-bold font-xlll position-relative">Working at {companyName}</span>
+            </div>
+            </div>
+            <div className="col-lg-4 col-md-6 mb-4">
+              <div className="bg-primary border-radius p-5 p-md-4 h-100">
+                <div className="d-flex align-items-center">
+                  <span className="pe-4 pt-1 display-4 text-white"><CountUp start={0} end={TotalEmployees} duration={3} /></span>
+                  <h5 className="mb-0 text-white">Qualified employees</h5>
+                </div>
+                <p className="text-white mt-3">{qualifiedemployees}</p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-6 mb-4 mb-lg-0">
+              <div className="h-100 bg-overlay-black-60 bg-holder border-radius p-4 pt-5" style={{ "backgroundImage": `url(/assets/images/gallery/07.jpg)` }}>
+                <div className="position-relative text-center pt-4">
+                  <ul className="list-unstyled list-inline text-white pt-4">
+                    <li className="list-inline-item me-1 font-xl text-warning"><i className="fas fa-star"></i></li>
+                    <li className="list-inline-item me-1 font-xl text-warning"><i className="fas fa-star"></i></li>
+                    <li className="list-inline-item me-1 font-xl text-warning"><i className="fas fa-star"></i></li>
+                    <li className="list-inline-item me-1 font-xl text-warning"><i className="fas fa-star"></i></li>
+                    <li className="list-inline-item me-1 font-xl text-warning"><i className="fas fa-star-half"></i></li>
+                  </ul>
+                  <h5 className="mb-0 text-white">Rated {TotalRating} out of 5 based on over <span className="text-primary"> {TotalReviews} reviews</span></h5>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-4 mb-4 mb-md-0">
+              <div className="h-100 text-center pt-4 pt-lg-5 px-4">
+                <h5 className="mb-1">Award-winning solution</h5>
+                <img className="img-fluid" src="/assets/images/svg/award.svg" alt="" />
+                <p>We've got a few awards thanks to our amazing clients.</p>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-4 mb-4 mb-md-0">
+              <div className="h-100 bg-dark text-center p-5 p-md-4 border-radius">
+                <span className="display-4 text-primary">{TotalClients}+</span>
+                <h5 className="text-white">Clients around the globe</h5>
+                <OwlCarousel className='owl-theme mt-4' {...options}>
+                    {
+                        clientsLogo.map((item,index)=>(
+                        <div className="item" key={index}>
+                            <img className="img-fluid center-block mx-auto px-4" src={item} alt="" />
+                        </div>
+                        ))
+                    }
+                </OwlCarousel>
+              </div>
+            </div>
+            <div className="col-lg-3 col-md-4">
+              <div className="bg-light h-100 pt-md-0 pt-5 border-radius d-flex align-items-end ps-4 pb-4">
+                  <h5 className="mb-0">We're <br /> epic <br /> since <span className="d-block display-2 fw-bold text-stroke-primary">{establishYear}</span></h5>
+              </div>
             </div>
           </div>
-        </div>       
-        <div className="row justify-content-center">
-            <div className="col-md-10">
-                <div className="root-div cd-horizontal-timeline">
-                    <div style={{ height: "100px", margin: "0 auto" }}>
-                        <HorizontalTimeline styles={{ outline: "#dfdfdf", foreground: "#ef3139" }}
-                        index={value} indexClick={(index) => {setValue(index);setPrevious(value);}} values={VALUES} />
-                    </div>
-                    <div className="events-content">                        
-                        <div className="row">
-                            <div className="col-md-4 position-relative">
-                                <h1 className="year">{timelineDescription[value].year}</h1>
-                            </div>
-                            <div className="col-md-8">
-                                <div className="timeline-text">
-                                <h6 className="text-dark"> {timelineDescription[value].title}</h6>
-                                <p className="border-start ps-3 font-italic">{timelineDescription[value].subtitle}</p>
-                                <p className="mb-0">{timelineDescription[value].description}</p>
-                                </div>
-                            </div>
-                        </div>  
-                    </div>
-                </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
   )
 }

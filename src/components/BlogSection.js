@@ -50,7 +50,7 @@ export default function BlogSection() {
   }
   ];
   return (
-    <section className="space-ptb">
+    <section className="space-pt">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-9">

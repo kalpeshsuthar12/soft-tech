@@ -7,7 +7,7 @@ export default function ActionSection() {
     const btn = "Let’s Get Started";
     const btnUrl = "/contact";
     return (
-    <section className="space-pb dark-background">
+    <section className="space-ptb dark-background">
       <div className="container">
         <div className="bg-dark text-center rounded py-5 px-3">
           <h2 className="text-white">{title}</h2>

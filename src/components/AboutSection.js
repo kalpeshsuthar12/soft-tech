@@ -1,10 +1,10 @@
 import React from 'react'
 
 export default function AboutSection() {
-    const established = "2010";
+    const established = "2018";
     const title = "We enable constant enterprise transformation at speed and scale."
     return (
-    <section className="space-pb">
+    <section className="space-pt">
       <div className="container">
         <div className="row justify-content-center pb-4 pb-md-5">
           <div className="col-lg-10">
