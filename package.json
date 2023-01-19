@@ -16,6 +16,7 @@
     "react-countup": "^6.4.0",
     "react-dom": "^18.2.0",
     "react-iframe": "^1.8.5",
+    "react-meta-tags": "^1.0.1",
     "react-owl-carousel": "^2.3.3",
     "react-router-dom": "^6.6.2",
     "react-scripts": "^5.0.1",
